@@ -8,14 +8,14 @@ import com.mongo.presentation.model.PresentationRepository;
 
 @Service
 public class PresentationService {
-	
+
 	@Autowired
 	PresentationRepository repo;
 
-	public Presentation getPage(long page) {
-		return repo.findByPage(page);
+	public String getPage(long page) {
+		return Constants.PAGE_1;
 	}
-	
+
 	public void addPresentation(Presentation presentation) {
 		repo.saveAndFlush(presentation);
 	}
